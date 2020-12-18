@@ -1,0 +1,19 @@
+@font-face {
+    font-display: fallback;
+    font-family: 'Futura Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: local('FuturaLTPro-Medium'), local('FuturaLTPro-Medium'),
+        url('./FuturaLTPro-Medium.woff2') format('woff2'),
+        url('./FuturaLTPro-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: fallback;
+    font-family: 'Futura Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('FuturaPT-Bold'), local('FuturaPT-Bold'),
+        url('./FuturaPT-Bold.woff2') format('woff2'),
+        url('./FuturaPT-Bold.woff') format('woff');
+}

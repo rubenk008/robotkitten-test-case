@@ -1,0 +1,15 @@
+.introContainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 26px;
+    padding: 0 63px;
+    max-width: 1440px;
+    padding: 126px 0 217px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introParagraph{
+    grid-column: 4/9;
+    padding: 0 33px 0 44px;
+}

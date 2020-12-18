@@ -1,0 +1,30 @@
+@import "../../theme/mixins";
+
+.parallaxBackgroundWrapper{
+    position: absolute;
+    min-height: 100%;
+    width: 100vw;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    transform: translate(0, 0);
+    transition: all 100ms;
+}
+
+.unityImage{
+    width: 269px;
+    height: 478px;
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: 600px;
+    margin-left: -200px;
+    opacity: 1;
+    clip-path: circle(300px at center);
+
+    img{
+        width: 269px;
+        height: auto;
+    }
+
+    @include imgGlitch("unityImage", 15, 100, 100, 200, 75);
+}

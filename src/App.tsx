@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react'
 
-function App() {
+import ParallaxBackground from './components/ParallaxBackground'
+import ProductGrid from './components/ProductGrid'
+import Intro from './components/Intro'
+import StarsBackground from './components/StarsBackground'
+
+const App = () =>{
+
+  const appWrapperRef= React.useRef<HTMLDivElement>(null)
+  const [appWrapperHeight, setAppWrapperHeight] = React.useState(0)
+
+  React.useEffect( () => {
+
+        if(appWrapperRef.current){
+            setAppWrapperHeight(appWrapperRef.current.offsetHeight);
+        }
+
+    }, [appWrapperRef]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appWrapper" ref={appWrapperRef}>
+      <StarsBackground />
+      <ParallaxBackground 
+          heightParrent={appWrapperHeight}
+      />
+      <Intro />
+      <ProductGrid />
     </div>
   );
 }
 
-export default App;
+export default App
+ 
